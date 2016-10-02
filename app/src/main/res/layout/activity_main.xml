@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable
-            name="nama"
-            type="String"/>
+        <variable name="nama" type="String"/>
     </data>
 
     <LinearLayout
@@ -26,12 +24,12 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="@={nama}"
             android:id="@+id/editTextNama"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Hasil"
-            android:id="@+id/textViewHasil"/>
+            tools:text='@{nama==null||nama.equals("") ? "" : "Nama Anda: "+nama}'/>
     </LinearLayout>
 
 </layout>
